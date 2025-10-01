@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guestbook</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Guestbook App</h1>
+
+  <!-- form section -->
+  <form id="guestbook-form" method="POST" action="/submit">
+    <input type="text" name="name" placeholder="Guest name" required>
+    <textarea name="message" placeholder="Write your comment here..." required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- comments section -->
+   <h1>Comments Here...</h1>
+  <section id="comments">
+    <!-- I've made this static for now, the one handling backend shld make sure comments are displayed from guestbook.json -->
+    <div class="comment">
+      <div class="name">Patience Makafui</div>
+      <div class="time">2025-10-01 23:22</div>
+      <div class="message">Life is great man!🎉😎</div>
+    </div>
+  </section>
+</body>
+</html>
