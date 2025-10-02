@@ -4,7 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guestbook</title>
-  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+
+  <style>
+        body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: 0 auto 20px auto;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    input, textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #695768;
+    }
+  </style>
 </head>
 <body>
   <h1>Guestbook App</h1>
@@ -17,14 +60,14 @@
   </form>
 
   <!-- comments section -->
-   <h1>Comments Here...</h1>
-  <section id="comments">
+   <!-- <h1>Comments Here...</h1>
+  <section id="comments"> -->
     <!-- I've made this static for now, the one handling backend shld make sure comments are displayed from guestbook.json -->
-    <div class="comment">
+    <!-- <div class="comment">
       <div class="name">Patience Makafui</div>
       <div class="time">2025-10-01 23:22</div>
       <div class="message">Life is great man!🎉😎</div>
     </div>
-  </section>
+  </section> -->
 </body>
 </html>

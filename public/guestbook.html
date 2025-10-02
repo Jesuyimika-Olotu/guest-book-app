@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        padding: 20px;
+        }
+
+        h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        }
+        #comments {
+        max-width: 500px;
+        margin: 0 auto;
+        }
+
+        .comment {
+        background: #fff;
+        border-left: 4px solid #007bff;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        }
+
+        .comment .name {
+        font-weight: bold;
+        }
+
+        .comment .time {
+        font-size: 0.9em;
+        color: gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- comments section -->
+   <h1>Comments Here...</h1>
+  <section id="comments">
+    <!-- I've made this static for now, the one handling backend shld make sure comments are displayed from guestbook.json -->
+    <div class="comment">
+      <div class="name">Patience Makafui</div>
+      <div class="time">2025-10-01 23:22</div>
+      <div class="message">Life is great man!🎉😎</div>
+    </div>
+</body>
+</html>

@@ -1,97 +1,10 @@
 [{
+    "name": "Patience Makafui",
     "comment": "I am happy about the app",
     "time": "2:00pm"
 },
-{
+{   "name": "Johnson John",
     "comment": "I like the app",
     "time": "3:00pm"
-},
-{
-    "comment": "I like the UI",
-    "time": "4:00pm"
-},
-{
-    "comment": "Best app ever created",
-    "time": "5:00pm"
-},
-{
-    "comment": "I am happy about the app",
-    "time": "2:00pm"
-},
-{
-    "comment": "I like the app",
-    "time": "3:00pm"
-},
-{
-    "comment": "I like the UI",
-    "time": "4:00pm"
-},
-{
-    "comment": "Best app ever created",
-    "time": "5:00pm"
-},
-{
-    "comment": "I am happy about the app",
-    "time": "2:00pm"
-},
-{
-    "comment": "I like the app",
-    "time": "3:00pm"
-},
-{
-    "comment": "I like the UI",
-    "time": "4:00pm"
-},
-{
-    "comment": "Best app ever created",
-    "time": "5:00pm"
-},
-{
-    "comment": "I am happy about the app",
-    "time": "2:00pm"
-},
-{
-    "comment": "I like the app",
-    "time": "3:00pm"
-},
-{
-    "comment": "I like the UI",
-    "time": "4:00pm"
-},
-{
-    "comment": "Best app ever created",
-    "time": "5:00pm"
-},
-{
-    "comment": "I am happy about the app",
-    "time": "2:00pm"
-},
-{
-    "comment": "I like the app",
-    "time": "3:00pm"
-},
-{
-    "comment": "I like the UI",
-    "time": "4:00pm"
-},
-{
-    "comment": "Best app ever created",
-    "time": "5:00pm"
-},
-{
-    "comment": "I am happy about the app",
-    "time": "2:00pm"
-},
-{
-    "comment": "I like the app",
-    "time": "3:00pm"
-},
-{
-    "comment": "I like the UI",
-    "time": "4:00pm"
-},
-{
-    "comment": "Best app ever created",
-    "time": "5:00pm"
 }
 ]
