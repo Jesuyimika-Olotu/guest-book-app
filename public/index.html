@@ -54,12 +54,12 @@
     }
 
     // Save new comment
-    /*function saveNewComment(comment) {
+    function saveNewComment(comment) {
       const existingComments = localStorage.getItem('newGuestbookComments');
       const commentsArray = existingComments ? JSON.parse(existingComments) : [];
       commentsArray.unshift(comment);
       localStorage.setItem('newGuestbookComments', JSON.stringify(commentsArray));
-    } */
+    }
 
     // Load and display comments
     async function loadComments() {
