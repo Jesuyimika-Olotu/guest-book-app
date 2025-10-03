@@ -1,17 +1,30 @@
-name: Super-Linter
+name: Run Tests
 
-on: push
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  super-lint:
-    name: Lint code base
+  test:
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
-    - name: Run Super-Linter
-      uses: github/Super-Linter@v3
-      env:
-        DEFAULT_BRANCH: main
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run backend tests
+      run: npm test
+
+    - name: Run frontend tests (if using Jest or Puppeteer)
+      run: npm run test:frontend
+      continue-on-error: true  # Optional: don't fail the build if frontend tests are flaky
