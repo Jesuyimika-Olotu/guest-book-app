@@ -28,6 +28,6 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run frontend tests (if using Jest or Puppeteer)
+    - name: Run frontend tests
       run: npm run test:frontend
       continue-on-error: true  # Optional: don't fail the build if frontend tests are flaky
