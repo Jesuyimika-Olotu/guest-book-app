@@ -14,7 +14,7 @@
 
   <!-- form section -->
   <form id="guestbook-form" method="POST" action="/">
-    <input type="text" name="name" placeholder="Enter your name" required autofocus><br>
+    <input type="text" name="name" placeholder="Enter name" required autofocus><br>
     <textarea name="message" placeholder="Write your comment here..." required></textarea><br>
     <button type="submit">Submit</button>
   </form>
@@ -109,7 +109,7 @@
       
       saveNewComment(newComment);
       form.reset();
-      await loadComments(); // <-- Refresh comments immediately after adding
+      await loadComments(); // Refresh comments immediately after adding
       alert('Comment added successfully!');
     }
 
