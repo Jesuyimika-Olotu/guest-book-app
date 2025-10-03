@@ -1,7 +1,6 @@
 import express from "express";
 import fs from "node:fs";
 import path from "path";
-import {fileURLToPath} from 'url';
 
 const app = express();
 app.use(express.static("public"))
@@ -13,7 +12,6 @@ const file = __dirname+"/public/guestbook.json"
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public/index.html"));
-    // res.send("In home route")
 })
 
 app.post('/', (req, res) => {
@@ -52,22 +50,6 @@ fs.readFile(file, 'utf-8', (err, data) => {
 })
 
 app.get("/guestbook", (req, res) => {
-    // const data = comment.comments;
-    // const reversedComment = comment.reverse()
-    // const info = reversedComment.map(item => `<div style="background-color: gray; padding: 20px; border-radius: 16px;">${item.comment}</div>`)
-    // res.send(`
-    //     <html>
-    //     <body> 
-    //         <h1 style="text-align: center; font-family: sans-serif">All Comments</h1>
-    //         ${info}
-    //     </body>
-    //     </html>
-    //     `);
-    // res.sendFile(path.join(__dirname, "public/guestbook.html"))
-    // const __filename = fileURLToPath(import.meta.url);
-    // const __dirname = path.dirname(__filename);
-    // const _retfile = path.join(__dirname, 'public/guestbook.html');
-    // res.sendFile(_retfile)
     res.sendFile(path.join(__dirname, 'public/guestbook.html'))
 })
 

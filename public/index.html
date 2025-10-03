@@ -19,17 +19,17 @@
     <button type="submit">Submit</button>
   </form>
 
-<section id="comments">
+<!-- <section id="comments">
     <div class="comment">
       <div class="message">Loading comments from guestbook.json...</div>
     </div>
-  </section>
+  </section> -->
 
-   <script>
+   <!-- <script>
     // Load comments from guestbook.json
     async  function loadCommentsFromJSON() {
       try {
-        const response = await fetch('./guestbook.json');
+        const response = await fetch('../guestbook.json');
         if (!response.ok) throw new Error('Failed to load JSON');
         
         const jsonData = await response.json();
@@ -120,6 +120,6 @@
 
     //Auto-refresh comments every 30 seconds
     setInterval(loadComments, 30000);
-  </script>
+  </script> -->
 </body>
 </html>
