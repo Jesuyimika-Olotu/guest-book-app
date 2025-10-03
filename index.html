@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guestbook App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+  <h1 class="heading">GuestBook App</h1><br><br>
+  
+
+  <!-- form section -->
+  <form id="guestbook-form" method="POST" action="/">
+    <input type="text" name="name" placeholder="Enter your name" required autofocus><br>
+    <textarea name="message" placeholder="Write your comment here..." required></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+
+<!-- <section id="comments">
+    <div class="comment">
+      <div class="message">Loading comments from guestbook.json...</div>
+    </div>
+  </section> -->
+
+   <!-- <script>
+    // Load comments from guestbook.json
+    async  function loadCommentsFromJSON() {
+      try {
+        const response = await fetch('../guestbook.json');
+        if (!response.ok) throw new Error('Failed to load JSON');
+        
+        const jsonData = await response.json();
+        return jsonData.map(item => ({
+          name: 'Guest',
+          message: item.comment,
+          time: item.time,
+          source: 'json'
+        }));
+      } catch (error) {
+        console.error('Error loading guestbook.json:', error);
+        return [];
+      }
+    }
+
+    // Get all comments
+    async function getAllComments() {
+      const newComments = localStorage.getItem('newGuestbookComments');
+      const newCommentsArray = newComments ? JSON.parse(newComments) : [];
+      
+      const jsonComments = await loadCommentsFromJSON();
+      
+      // New comments first, then JSON comments
+      return [...newCommentsArray, ...jsonComments];
+    }
+
+    // Save new comment
+    function saveNewComment(comment) {
+      const existingComments = localStorage.getItem('newGuestbookComments');
+      const commentsArray = existingComments ? JSON.parse(existingComments) : [];
+      commentsArray.unshift(comment);
+      localStorage.setItem('newGuestbookComments', JSON.stringify(commentsArray));
+    }
+
+    // Load and display comments
+    async function loadComments() {
+      const allComments = await getAllComments();
+      const commentsContainer = document.getElementById('comments');
+      
+      commentsContainer.innerHTML = '';
+      
+      allComments.forEach(comment => {
+        const commentElement = document.createElement('div');
+        commentElement.className = 'comment';
+        
+        if (!comment.source) {
+          commentElement.style.borderLeft = '4px solid #28a745';
+        }
+        
+        commentElement.innerHTML = `
+          <div class="name">${comment.name}: </div>
+          <div class="time">${comment.time}</div><br>
+          <div class="message">"<em>${comment.message}</em>"</div>
+        `;
+        commentsContainer.appendChild(commentElement);
+      });
+    }
+  
+    // Handle form submission
+    async function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      const form = event.target;
+      const name = form.name.value.trim();
+      const message = form.message.value.trim();
+      
+      if (!name || !message) {
+        alert('Please fill in both name and message fields');
+        return;
+      }
+      
+      const newComment = {
+        name: name,
+        message: message,
+        time: new Date().toLocaleTimeString() + ' ' + new Date().toLocaleDateString()
+      };
+      
+      saveNewComment(newComment);
+      form.reset();
+      await loadComments(); // <-- Refresh comments immediately after adding
+      alert('Comment added successfully!');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComments();
+      document.getElementById('guestbook-form').addEventListener('submit', handleFormSubmit);
+    });
+
+    //Auto-refresh comments every 30 seconds
+    setInterval(loadComments, 30000);
+  </script> -->
+</body>
+</html>
