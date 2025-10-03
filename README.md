@@ -33,7 +33,7 @@ The guest book app provides the following API endpoints:
 - `POST /`: Handles the submission of the guest book form and saves the data to a JSON file.
 - `GET /guestbook`: Serves the guestbook.html file, which displays all the submitted comments.
 
-## Contributing
+## Contribution
 
 If you would like to contribute to the guest book app, please follow these steps:
 
