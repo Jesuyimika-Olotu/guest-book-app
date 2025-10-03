@@ -54,4 +54,4 @@ npm test       # Run backend tests
 npm run test:frontend # Run frontend tests
 ```
 
-The backend tests are implemented using Jest, while the frontend tests are located in the `tests/frontend.test.js` file.
+The backend tests are implemented using Jest.
