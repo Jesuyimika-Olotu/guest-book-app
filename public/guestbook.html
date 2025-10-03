@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        padding: 20px;
+        }
+
+        h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        }
+        
+        #comments {
+        max-width: 500px;
+        margin: 0 auto;
+        }
+
+        .comment {
+        background: #fff;
+        border-left: 4px solid #007bff;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        }
+
+        .comment .name {
+        font-weight: bold;
+        }
+
+        .comment .time {
+        font-size: 0.9em;
+        color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="comments">
+    <div class="comment">
+      <div class="message">Loading comments from guestbook.json...</div>
+    </div>
+  </section>
+
+  <script>
+     async  function loadCommentsFromJSON() {
+      try {
+        const response = await fetch('../guestbook.json');
+        if (!response.ok) throw new Error('Failed to load JSON');
+        
+        const allComments = await response.json();
+        const reversedComment = allComments.reverse()
+      const commentsContainer = document.getElementById('comments');
+      
+      commentsContainer.innerHTML = '';
+      
+      reversedComment.forEach(comment => {
+        const commentElement = document.createElement('div');
+        commentElement.className = 'comment';
+        
+        if (!comment.source) {
+          commentElement.style.borderLeft = '4px solid #28a745';
+        }
+        
+        commentElement.innerHTML = `
+          <div class="name">${comment.name}</div>
+          <div class="time">${comment.time}</div>
+          <div class="message">${comment.comment}</div>
+        `;
+        commentsContainer.appendChild(commentElement);
+      });
+      } catch (error) {
+        console.error('Error loading guestbook.json:', error);
+        return [];
+      }
+    }
+
+    loadCommentsFromJSON()
+  </script>
+</body>
+</html>
